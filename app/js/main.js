@@ -13,7 +13,7 @@ $(function() {
     //     $loader.fadeOut('slow');            
     // });
 
-    $wnd.scroll(function() { onscroll(); });
+    // $wnd.scroll(function() { onscroll(); });
 
     var onscroll = function() {
         if($wnd.scrollTop() > $wnd.height()) {
@@ -38,7 +38,7 @@ $(function() {
         });
     }
 
-    onscroll();
+    // onscroll();
 
     $top.click(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
@@ -193,70 +193,73 @@ $(function() {
     });
 
     $(".carousel-reviews").owlCarousel({
-        nav: true,
-        dots: false,
+        items: 1,
+        nav: false,
+        dots: true,
         loop: true,
         smartSpeed: 500,
         autoplay: true,
         autoplayTimeout: 10000,
         margin: 60,
         navText: ['', ''],
-        responsive: {
-            0: { items: 1 },
-            768: { items: 2 }
-        },
-    });    
+    });        
 
-    $(".carousel-offer").owlCarousel({
-        nav: true,
-        dots: false,
-        loop: false,
+    $(".carousel-catalog").owlCarousel({
+        nav: false,
+        dots: true,
+        loop: true,
         smartSpeed: 500,
-        margin: 60,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        margin: 10,
         navText: ['', ''],
+        onChanged: function(e) {
+            setTimeout(function() {
+                $(".carousel-catalog .owl-item").removeClass("scale");
+                var items = $(".carousel-catalog .owl-item.active");
+                if(items.length == 3) {
+                    items.each(function(i, item) {
+                        if(i == 1) $(item).addClass("scale");                        
+                    });
+                }
+            }, 0);
+        },
         responsive: {
             0: { items: 1 },
-            768: { items: 2 },
-            992: { items: 3 },
-            1200: { items: 4 },            
+            768: { items: 2 },        
+            992: { items: 3, margin: 0 },
+            // 1200: { items: 5 }        
         },
-        onInitialized: function(e) {
-            var $t = $(e.target);
-            if(!$t.hasClass('active'))
-                $t.addClass('hidden');
-        }
     });
 
     $(".carousel-certificate").owlCarousel({
-        nav: true,
-        dots: false,
+        nav: false,
+        dots: true,
         loop: true,
         smartSpeed: 500,
-        // autoWidth: true,
         autoplay: true,
         autoplayTimeout: 10000,
-        margin: 30,
+        margin: 10,
         navText: ['', ''],
+        onChanged: function(e) {
+            setTimeout(function() {
+                $(".carousel-certificate .owl-item").removeClass("scale");
+                var items = $(".carousel-certificate .owl-item.active");
+                if(items.length == 3) {
+                    items.each(function(i, item) {
+                        if(i == 1) $(item).addClass("scale");                        
+                    });
+                }
+            }, 0);
+        },
         responsive: {
             0: { items: 1 },
-            480: { items: 2, autoplay: false }
+            768: { items: 2 },        
+            992: { items: 3 },
+            // 1200: { items: 5 }        
         },
     });
 
-    var $items = $(".section-offer .item");
-    var $carousels = $(".carousel-offer");
-
-    $items.click(function(i) {
-        var $this = $(this);
-        var idx = $this.index();
-
-        $items.removeClass('active');
-        $this.addClass('active');
-
-        $carousels.addClass('hidden');
-        $carousels.eq(idx).removeClass('hidden');
-
-    });
 
 });
 

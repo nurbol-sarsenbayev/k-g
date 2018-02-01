@@ -42,7 +42,7 @@
 				<div class="header-content">
 					<img src="./img/logo.png" class="logo" alt="">
 					
-					<h3 class="logo-text hidden-xs">Изготавление кухонь на заказ по Казахстану</h3>
+					<h3 class="logo-text hidden-xs">Изготавление кухонь <br> на заказ по Казахстану</h3>
 
 					<nav class="main-menu">
 						<div class="container">
@@ -51,23 +51,20 @@
 								<li><a href="#advantages">Преимущества</a></li>
 								<li><a href="#reviews">Отзывы</a></li>
 								<li><a href="#contacts">Контакты</a></li>
-								<li class="hidden-lg">+7 (708) 714-71-27</li>
 							</ul>
 						</div>
 					</nav>
 
-					<div style="flex-grow: 1"></div>
+					<div style="flex-grow: 1;" class="hidden-lg hidden-md"></div>
 
-					<div class="header-zvonok hidden-xss">
-						<a href="#" class="item modal-open" data-id="application">Заказать звонок</a>
-						<div class="hidden-lg">+7 (727) 394-31-80</div>
+					<i class="ico-1 ico-phone hidden-xss"></i>
+
+ 					<div class="header-zvonok">						
+						<div class="header-phones">+7 (708) 714-71-27</div>
+						<a href="#" class="modal-open" data-id="application">Заказать звонок</a>
 					</div>
 
-					<div class="header-phones visible-lg">
-						+7 (708) 714-71-27
-					</div>
-
-					<button class="hamburger hamburger--elastic hamburger--accessible hidden-lg">
+					<button class="hamburger hamburger--elastic hamburger--accessible hidden-lg hidden-md">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
@@ -76,19 +73,19 @@
 			</div>
 		</header>		
 
-		<section class="section section-main" style="background-image: url('./img/back-main.jpg')">
+		<section class="section section-main" style="background-image: url('./img/main-back.jpg')">
 			<div class="container">
 				<div class="section-main-content">
-					<h1 class="section-main-title">Профессиональные бухгалтерские услуги от 20 000 тенге в месяц</h1>
-					<h3 class="section-main-subtitle">От постановки бухгалтерского учета с нуля до полноценного ведения всей бухгалтерской документации</h3>
+					<h1 class="section-main-title">Продажа эксклюзивных дизайнерских кухонь собственного производства</h1>
+					<h3 class="section-main-subtitle">на 30% дешевле рыночной цены</h3>
+
 					<div class="section-main-form">
-						<p class="bold">Для посетителей сайта скидка 15% на любую дополнительную услугу!</p>
-						<p class="bold">Оставьте заявку, и наш менеджер свяжется с Вами в течение 15 минут</p>
+						<p>Оставьте заявку и закажите бесплатный выезд 
+								дизайнера/замерщика!</p>
 						<form>
 							<div class="flex-row">
-								<input class="input inverse" type="text" name="Имя" placeholder="Введите имя">
 								<div class="input-div">
-									<input class="input inverse phone" type="tel" name="Телефон" required placeholder="Введите номер*">
+									<input class="input inverse phone" type="tel" name="Телефон" required placeholder="Номер телефона*">
 									<span class="error-message">Заполните это поле</span>
 								</div>
 								<input type="button" class="button form-submit" value="Оставить заявку">
@@ -99,404 +96,173 @@
 			</div>
 		</section>
 
-		<section class="section section-plus">
+		<section class="section section-plus gray">
 			<div class="container">
 				<div class="section-plus-content">
 					<div class="plus">
-						<div class="plus-image"><img src="./img/plus-1.png" alt=""></div>
-						<h4 class="plus-text">Защитим при налоговой проверке</h4>
+						<i class="ico-2 i-1"></i>
+						<h4 class="plus-text">Успешно изготовили и установили более 2000 кухонь</h4>
 					</div>
 					<div class="plus">
-						<div class="plus-image"><img src="./img/plus-2.png" alt=""></div>
-						<h4 class="plus-text">Сдадим отчетность в срок</h4>
+						<i class="ico-2 i-2"></i>
+						<h4 class="plus-text">Производим доставку по Алматы бесплатно</h4>
 					</div>
 					<div class="plus">
-						<div class="plus-image"><img src="./img/plus-3.png" alt=""></div>
-						<h4 class="plus-text">Безопасно снизим налоги</h4>
+						<i class="ico-2 i-3"></i>
+						<h4 class="plus-text">Предоставляем гарантированные скидки до 50%  </h4>
 					</div>
 					<div class="plus">
-						<div class="plus-image"><img src="./img/plus-4.png" alt=""></div>
-						<h4 class="plus-text">Круглосуточная поддержка клиентов</h4>
+						<i class="ico-2 i-4"></i>
+						<h4 class="plus-text">Делаем кухни из массива, ндс, стекла, дсп, шпона</h4>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<section class="section section-offer" id="services" style="background-image: url('./img/back-offer.jpg')">
+		
+		<section class="section section-catalog">
 			<div class="container">
-				<h2 class="section-title">Мы предлагаем:</h2>
-				<div class="section-offer-row">
-					<div class="item active">Бухгалтерский учет</div>
-					<div class="item">Налоговая и статистическая отчетность</div>
-					<div class="item">Кадровый учет</div>
-					<div class="item">Дополнительные услуги</div>
-				</div>
+				<h2 class="section-title">Изготовим любую кухню из каталогов <br> по Вашим размерам с учетом всех пожеланий!</h2>
+				<div class="section-catalog-content">
+					<div class="section-catalog-buttons small">
+						<button class="button small inverse">Классика</button>
+						<button class="button small">Модерн</button>
+					</div>
 
-				<form>
-					<div>
-						<div class="owl-carousel carousel-offer active">
-							<div class="card">
-								<p>Постановка бух учета</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-1" name="Услуга" value="Постановка бух учета">	
-									<label for="service-radio-1-1">Выбрать</label>	
-								</div>												
-							</div>
-							<div class="card">
-								<p>Ведение бух учета в 1С Казахстан</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-2" name="Услуга" value="Ведение бух учета в 1С Казахстан">	
-									<label for="service-radio-1-2">Выбрать</label>	
-								</div>												
-							</div>
-							<div class="card">
-								<p>Экспресс-аудит бух учета предыдущего периода</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-3" name="Услуга" value="Экспресс-аудит бух учета предыдущего периода">	
-									<label for="service-radio-1-3">Выбрать</label>	
-								</div>												
-							</div>
-							<div class="card">
-								<p>Восстановление бух учета</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-4" name="Услуга" value="Восстановление бух учета">	
-									<label for="service-radio-1-4">Выбрать</label>	
-								</div>												
-							</div>															
-							<div class="card">
-								<p>Ведение <br> онлайн-банкинга</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-5" name="Услуга" value="Ведение онлайн-банкинга">	
-									<label for="service-radio-1-5">Выбрать</label>	
-								</div>												
-							</div>
-							<div class="card">
-								<p>Бухгалтерские и налоговые консультации</p>
-								<div class="radio">
-									<input type="checkbox" id="service-radio-1-6" name="Услуга" value="Бухгалтерские и налоговые консультации">	
-									<label for="service-radio-1-6">Выбрать</label>	
-								</div>												
-							</div>					
+					<div class="section-catalog-radios">
+						<div class="radio">
+							<input class="input" type="radio" name="Город" value="Бремен" id="city-1" checked>
+							<label for="city-1">Бремен</label>
 						</div>
-
-						<div class="owl-carousel carousel-offer">
-							<div class="card">
-								<p>Налоговое планирование</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Налоговое планирование" id="service-radio-2-1"><label for="service-radio-2-1">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Расчет налогов</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Расчет налогов" id="service-radio-2-2"><label for="service-radio-2-2">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Заполнение налоговых деклараций</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Заполнение налоговых деклараций" id="service-radio-2-3"><label for="service-radio-2-3">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Перечисление обязательных платежей в бюджет</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Перечисление обязательных платежей в бюджет" id="service-radio-2-4"><label for="service-radio-2-4">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Формирование  статистической отчетности за период</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Формирование  статистической отчетности за период" id="service-radio-2-5"><label for="service-radio-2-5">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Отправка статистической отчетности в электронном виде или нарочным</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Отправка статистической отчетности в электронном виде или нарочным" id="service-radio-2-6"><label for="service-radio-2-6">Выбрать</label></div>
-							</div>
+						<div class="radio">
+							<input class="input" type="radio" name="Город" value="Мюнстер" id="city-2">
+							<label for="city-2">Мюнстер</label>
 						</div>
-
-						<div class="owl-carousel carousel-offer">
-							<div class="card">
-								<p>Ведение кадрового делопроизводства</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Ведение кадрового делопроизводства" id="service-radio-3-1"><label for="service-radio-3-1">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Расчет заработной платы , других начислений и налогов</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Расчет заработной платы , других начислений и налогов" id="service-radio-3-2"><label for="service-radio-3-2">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Ведение корреспонденции</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Ведение корреспонденции" id="service-radio-3-3"><label for="service-radio-3-3">Выбрать</label></div>
-							</div>
-						</div>
-
-						<div class="owl-carousel carousel-offer">
-							<div class="card">
-								<p>Подготовка договоров поставщиков и покупателей</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Подготовка договоров поставщиков и покупателей" id="service-radio-4-1"><label for="service-radio-4-1">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Проведение независимой инвентаризации</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Проведение независимой инвентаризации" id="service-radio-4-2"><label for="service-radio-4-2">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Подготовка документов для получения кредита в банке физическими и юридическими лицами</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Подготовка документов для получения кредита в банке физическими и юридическими лицами" id="service-radio-4-3"><label for="service-radio-4-3">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Сдача налоговой декларации физических лиц</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Сдача налоговой декларации физических лиц" id="service-radio-4-4"><label for="service-radio-4-4">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Разработка бухгалтерской и налоговой учетной политики</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Разработка бухгалтерской и налоговой учетной политики" id="service-radio-4-5"><label for="service-radio-4-5">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Регистрация контрольно-кассовых машин</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Регистрация контрольно-кассовых машин" id="service-radio-4-6"><label for="service-radio-4-6">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Электронное декларирование товаров</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Электронное декларирование товаров" id="service-radio-4-7"><label for="service-radio-4-7">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Информирование клиентов об изменениях в налоговом законодательстве </p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Информирование клиентов об изменениях в налоговом законодательстве " id="service-radio-4-8"><label for="service-radio-4-8">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Юридическая и налоговая регистрация ИП и ТОО, подготовка учредительных документов</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Юридическая и налоговая регистрация ИП и ТОО, подготовка учредительных документов" id="service-radio-4-9"><label for="service-radio-4-9">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Приостановление и восстановление деятельности ИП и ТОО</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Приостановление и восстановление деятельности ИП и ТОО" id="service-radio-4-10"><label for="service-radio-4-10">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Ликвидация предприятия</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Ликвидация предприятия" id="service-radio-4-11"><label for="service-radio-4-11">Выбрать</label></div>
-							</div>
-							<div class="card">
-								<p>Консультации по налогообложению</p>
-								<div class="radio"><input type="checkbox" name="Услуга" value="Консультации по налогообложению" id="service-radio-4-12"><label for="service-radio-4-12">Выбрать</label></div>
-							</div>
+						<div class="radio">
+							<input class="input" type="radio" name="Город" value="Магдебург" id="city-3">
+							<label for="city-3">Магдебург</label>
 						</div>
 					</div>
 
-					<button class="button inverse modal-open" data-id="service-modal">Заказать выбранное</button>
-				</form>
-				<p class="bold" id="price-list">Получите наш прайс-лист прямо сейчас!</p>
-				<form>
-					<input type="tel" class="input phone" required name="Номер для прайслиста" placeholder="Ваш номер*">
-					<a target="_blank" href="./files/price-list.pdf" class="button price-button">Получить прайс-лист</a>		
-				</form>
-			</div>
-		</section>
+					<div class="owl-carousel carousel-catalog">
+						<div class="carousel-catalog-item"><a href="./img/catalog-1.jpg" data-fancybox="gallery"><img src="./img/catalog-1.jpg" alt=""></a></div>
+						<div class="carousel-catalog-item"><a href="./img/catalog-2.jpg" data-fancybox="gallery"><img src="./img/catalog-2.jpg" alt=""></a></div>
+						<div class="carousel-catalog-item"><a href="./img/catalog-3.jpg" data-fancybox="gallery"><img src="./img/catalog-3.jpg" alt=""></a></div>
+						<div class="carousel-catalog-item"><a href="./img/catalog-1.jpg" data-fancybox="gallery"><img src="./img/catalog-1.jpg" alt=""></a></div>
+						<div class="carousel-catalog-item"><a href="./img/catalog-2.jpg" data-fancybox="gallery"><img src="./img/catalog-2.jpg" alt=""></a></div>
+						<div class="carousel-catalog-item"><a href="./img/catalog-3.jpg" data-fancybox="gallery"><img src="./img/catalog-3.jpg" alt=""></a></div>
+					</div>
 
-		<section class="section section-calculate">
-			<div class="container">
-				<h2 class="section-title">Мы поможем Вам рассчитать стоимость услуг</h2>
-				<p>Введите данные, и мы вышлем Вам индивидуальный расчет стоимости в ближайшее время</p>
+					<div class="section-catalog-buttons big">
+						<button class="button inverse">Узнать  стоимость</button>
+						<button class="button">Подробнее о кухне</button>
+					</div>
 
-				<div class="card">
-					<form>
-						<div class="card-row">
-							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-1" value="ТОО"><label for="company-type-1">ТОО</label></div>
-							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-2" value="ИП"><label for="company-type-2">ИП</label></div>
-							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-3" value="Другое"><label for="company-type-3">Другое</label></div>
-						</div>
-						<p>Режим налогообложения:</p>
-						<div class="card-row">
-							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-1" value="Общеустановленный"><label for="tax-mode-1">Общеустановленный</label></div>
-							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-2" value="Упрощенный"><label for="tax-mode-2">Упрощенный</label></div>
-							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-3" value="Патент"><label for="tax-mode-3">Патент</label></div>
-						</div>
-						<p>Вид деятельности:</p>
-						<div class="card-row">
-							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-1" value="Услуги"><label for="activity-type-1">Услуги</label></div>
-							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-2" value="Торговля"><label for="activity-type-2">Торговля</label></div>
-							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-3" value="Производство"><label for="activity-type-3">Производство</label></div>
-						</div>
-						<div class="card-row small">
-							<div class="radio">
-								<input type="checkbox" id="bill-radio-1" name="Счет-фактура" value="НДС">	
-								<label for="bill-radio-1">НДС</label>	
-							</div>
-							<div class="radio">
-								<input type="checkbox" id="bill-radio-2" name="Счет-фактура" value="ЭСФ">	
-								<label for="bill-radio-2">ЭСФ</label>	
-							</div>
-						</div>
-						<div class="card-row">
-							<p style="width: 190px">Количество сотрудников:</p>
-							<input type="number" name="Количество сотрудников" class="input" placeholder="Введите цифру">
-						</div>
-						<div class="card-row">
-							<p style="width: 190px">Количество операций:</p>
-							<input type="number" name="Количество операций" class="input" placeholder="Введите цифру">
-						</div>
-						<div class="card-row last">
-							<input type="text" class="input" name="Имя" placeholder="Введите имя">
-							<input type="text" class="input phone" name="Телефон" placeholder="Введите номер*" required>
-							<input type="email" class="input" name="Email" placeholder="Введите e-mail*" required>
-						</div>
-						<button class="button form-submit">Рассчитать стоимость</button>
-						<p class="small">*Ваши данные останутся в безопасности и не будут переданы третьим лицам  </p>
-					</form>
 				</div>
 			</div>
 		</section>
 
-		<section class="section section-why gray">
+		<section class="section section-advantage gray">
 			<div class="container">
-				<h2 class="section-title">Почему удаленная бухгалтерия лучше?</h2>
-
-				<div class="row">
-					<div class="col-xxs-12 col-xs-6 col-sm-3">
-						<div class="why">
-							<div class="why-image"><img src="./img/why-1.png" alt=""></div>
-							<h3 class="why-title">Экономия средств</h3>
-							<div class="why-content">Внештатный бухгалтер не требует лишних трат на свое содержание.</div>
-						</div>
+				<h2 class="section-title"> Преимущества кухонной  мебели</h2>
+				<div class="section-advantage-content">
+					<div class="advantage">
+						<div class="ico-3 i-1"></div>
+						<h3 class="advantage-title">Нестандартные решения</h3>
+						<div class="advantage-text">Мы всегда создаем кухни по индивидуальному эскизу, поэтому для нас не существует сложных или неудачных планировок: мы можем изготовить удобную и красивую кухню под любое помещение.</div>
 					</div>
-					<div class="col-xxs-12 col-xs-6 col-sm-3">
-						<div class="why">
-							<div class="why-image"><img src="./img/why-2.png" alt=""></div>
-							<h3 class="why-title">Повышение эффективности</h3>
-							<div class="why-content">Сотрудник вне офиса не уходит в отпуск и в декрет, не берет больничных и не пропускает рабочие дни.</div>
-						</div>
+					<div class="advantage">
+						<div class="ico-3 i-2"></div>
+						<h3 class="advantage-title">Удобство и вместительность</h3>
+						<div class="advantage-text">В наших кухнях хозяйки легко разместят громоздкие сервизы, которые используют раз в год, а также кастрюли, скороводки и посуду на каждый день. Там же останется место для продуктов и бытовой химии.</div>
 					</div>
-					<div class="col-xxs-12 col-xs-6 col-sm-3">
-						<div class="why">
-							<div class="why-image"><img src="./img/why-3.png" alt=""></div>
-							<h3 class="why-title">Распределение рисков</h3>
-							<div class="why-content">Вы занимаетесь бизнесом, а мы берем на себя бухгалтерию. Вам больше не нужно контролировать все и сразу.</div>
-						</div>
+					<div class="advantage">
+						<div class="ico-3 i-3"></div>
+						<h3 class="advantage-title">Гарантия 12 месяцев</h3>
+						<div class="advantage-text">Мы даем целый год гарантии на свои кухни, потому что тщательно следим за качеством и доверяем нашим европейским производителям.</div>
 					</div>
-					<div class="col-xxs-12 col-xs-6 col-sm-3">
-						<div class="why">
-							<div class="why-image"><img src="./img/why-4.png" alt=""></div>
-							<h3 class="why-title">Мобильность</h3>
-							<div class="why-content">Документы передаются моментально через мессенджеры, электронную почту или курьера.</div>
-						</div>
+					<div class="advantage">
+						<div class="ico-3 i-4"></div>
+						<h3 class="advantage-title">Гарантия соблюдения сроков  </h3>
+						<div class="advantage-text">Мы даем стопроцентную гарантию соблюдения сроков. Вы получите свою кухню точно согласно договору - день в день.</div>
 					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="section section-reason" id="about">
-			<div class="container">
-				<h2 class="section-title">7 причин работать с <span class="accent">"APRIL consulting"</span></h2>
-
-				<ul class="section-reason-list list">
-					<li>
-						<div class="section-reason-number">1</div>
-						<div class="section-reason-text">Стаж работы в бухгалтерии и на финансовом рынке более 25 лет</div>
-					</li>
-					<li>
-						<div class="section-reason-number">2</div>
-						<div class="section-reason-text">Гибкая система тарифов</div>
-					</li>
-					<li>
-						<div class="section-reason-number">3</div>
-						<div class="section-reason-text">Опыт работы с компаниями, занимающимися импортом и экспортом товаров с ЕАЭС и третьих стран</div>
-					</li>
-					<li>
-						<div class="section-reason-number">4</div>
-						<div class="section-reason-text">Опыт работы с компаниями, состоящими на учете по НДС</div>
-					</li>
-					<li>
-						<div class="section-reason-number">5</div>
-						<div class="section-reason-text">Опыт работы с компаниями, осуществляющими выписку ЭСФ</div>
-					</li>
-					<li>
-						<div class="section-reason-number">6</div>
-						<div class="section-reason-text">Бесплатно предоставляем базу "1С" для ведения бухгалтерского учета</div>
-					</li>
-					<li>
-						<div class="section-reason-number">7</div>
-						<div class="section-reason-text">Проводим бесплатное экспресс-обучение основам бухгалтерии и налогообложения для клиентов-руководителей</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="section section-question" style="background-image: url('./img/back-question.jpg')">
-			<div class="container">
-				<h2 class="section-title">Вопросы доверия</h2>
-				<p>Мы понимаем, что Ваше доверие нужно заслужить.<br>
-					<strong>Поэтому у нас есть особое предложение!</strong></p>
-
-				<div class="section-question-content">
-					<p>Для начинающего бизнеса первый месяц наших услуг бесплатно, 
-							для работающего - со скидкой 50 % *  </p>
-					<button class="button modal-open" data-id="application">Рассчитать стоимость</button>
-					<p class="small">*а также скидки на последующие месяцы</p>
+					<div class="advantage">
+						<div class="ico-3 i-5"></div>
+						<h3 class="advantage-title">Комплектующие от ведущих мировых производителей</h3>
+						<div class="advantage-text">Наши кухни служат по-настоящему долго, потому что мы используем комплектующие от ведущих производителей Германии, Австрии и Италии.</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="section section-certificate" id="certificates">
 			<div class="container">
-				<h2 class="section-title">Наши сертификаты</h2>
+				<h2 class="section-title">Наши награды и сертификаты</h2>
 
-				<div class="owl-carousel carousel-certificate">
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" class="section-certificate-item" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>		
-					</div>
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-2.jpg" class="section-certificate-item" data-fancybox="gallery">
-							<img src="./img/certificate-mini-2.jpg" alt="">						
-						</a>
+				<div class="row">
+					<div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12">
+						<div class="owl-carousel carousel-certificate">
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+							<div class="carousel-certificate-item">
+								<a href="./img/certificate.jpg" class="section-certificate-item" data-fancybox="gallery">
+									<img src="./img/certificate.jpg" alt="">						
+								</a>		
+							</div>
+						</div>
 					</div>
 				</div>
+
 
 			</div>
 		</section>
 
 		<section class="section section-reviews gray">
 			<div class="container">
-				<h2 class="section-title">Благодарности наших клиентов</h2>
+				<h2 class="section-title">Отзывы наших благодарных клиентов</h2>
 
 				<div class="row">
 					<div class="col-lg-10 col-lg-offset-1">
 						<div class="owl-carousel carousel-reviews">
 							<div class="carousel-reviews-item">
-								<div class="carousel-reviews-title">Директор ТОО «Эталон-Дем», Шаймерденова Жанна Сафуановна  </div>
-								<div class="carousel-reviews-content">Директор ТОО «Эталон-Дем» Шаймерденова Жанна
-									Сафуановна выражает благодарность Ерекешевой Жамал
-									Казиевне за консультации по бухгалтерскому учету и
-									системе налогообложения. Компания «Эталон-Дем»
-									занимается импортом товаров из дальнего зарубежья,
-									является плательщиком НДС и выписывает электронные
-									счета-фактуры. В этой связи возникает много вопросов, на
-									которые Жамал Казиевна всегда дает оперативные
-									и профессиональные ответы. Надеемся, что наше
-									сотрудничество будет успешно продолжаться!
+								<div class="carousel-reviews-image">
+									<img src="./img/review-1.jpg" alt="" class="carousel-reviews-image-img">
+									<img src="./img/review-author-1.jpg" alt="" class="carousel-reviews-image-author">
+								</div>
+								<div class="carousel-reviews-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+									<div class="carousel-reviews-author">Николай Осадчук, г. Алматы</div>
 								</div>
 							</div>
+							
 							<div class="carousel-reviews-item">
-								<div class="carousel-reviews-title">ИП "Раимбекова Х.А."  </div>
-								<div class="carousel-reviews-content">ИП &quot;Раимбекова Х.А.&quot; искренне благодарит Ерекешеву
-									Жанлсын Казиевну за ее профессионализм и оперативность
-									в решении сложных задач в сфере бухгалтерского учета и
-									налогообложения.
-									Жанлсын Казиевна - настоящий профессионал своего дела,
-									необычайно доброжелательный и чуткий человек, с
-									которым всегда приятно работать.
+								<div class="carousel-reviews-image">
+									<img src="./img/review-1.jpg" alt="" class="carousel-reviews-image-img">
+									<img src="./img/review-author-1.jpg" alt="" class="carousel-reviews-image-author">
 								</div>
-							</div>
-							<div class="carousel-reviews-item">
-								<div class="carousel-reviews-title">ТОО "Tabys Group ltd" в лице Мусереповой Г.М.</div>
-								<div class="carousel-reviews-content">ТОО &quot;Tabys Group ltd&quot; в лице Мусереповой Г.М.
-									благодарит Ерекешеву Жанлсын Казиевну за оперативную
-									профессиональную помощь и ценит ее за обширные знания
-									в бухгалтерском деле. ТОО &quot;Tabys Group ltd&quot; желает
-									Жанлсын Казиевне больших успехов в работе.
-								</div>
-							</div>
-							<div class="carousel-reviews-item">
-								<div class="carousel-reviews-title">Директор ТОО «RealСapitalInvest» Мухтаров Я.Н.</div>
-								<div class="carousel-reviews-content">Директор ТОО «RealСapitalInvest» Мухтаров Я.Н.  благодарит за точность, грамотность и оперативность в решении рабочих вопросов Якупову Ширингуль.
-										Наша компания искренне надеется продолжать сотрудничать с Вами!								
-								</div>
-							</div>
-							<div class="carousel-reviews-item">
-								<div class="carousel-reviews-title">Директор ТОО «Мадина» Сабитов А.А. </div>
-								<div class="carousel-reviews-content">Директор ТОО «Мадина» Сабитов А.А. благодарит Якупову Ширингуль за плодотворное сотрудничество.
-										Искренне желаем Якуповой Ширингуль профессионального роста, финансовой стабильности и надежных партнеров.
+								<div class="carousel-reviews-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+									<div class="carousel-reviews-author">Николай Осадчук, г. Алматы</div>
 								</div>
 							</div>
 						</div>
@@ -509,46 +275,53 @@
 
 		<section class="section section-how" id="how">
 			<div class="container">
-				<h2 class="section-title">Как мы работаем?</h2>
+				<h2 class="section-title"> Изготовление кухни - сложный процесс, <br>
+						но для нашего клиента - всего 5 шагов:</h2>
 
 				<div class="section-how-content">
 					<div class="how">
-						<div class="how-image"><img src="./img/how-1.png" alt=""></div>
-						<div class="how-content">Вы оставляете заявку <br> на сайте </div>
+						<div class="how-image ico-4 i-1"></div>
+						<h4 class="how-title">Заявка</h4>
+						<div class="how-content">Вы оставляете заявку на сайте или звоните нам</div>
 					</div>
 					<div class="how">
-						<div class="how-image"><img src="./img/how-2.png" alt=""></div>
-						<div class="how-content">Назначаем встречу, <br> обсуждаем особенности <br> Вашего бизнеса</div>
+						<div class="how-image ico-4 i-2"></div>
+						<h4 class="how-title"> Дизайн-проект</h4>
+						<div class="how-content">Дизайнер готовит проект Вашей кухни, рассчитывает стоимость, заключает договор</div>
 					</div>
 					<div class="how">
-						<div class="how-image"><img src="./img/how-3.png" alt=""></div>
-						<div class="how-content">Заключаем договор на <br> оказание услуг и соглашение <br> о конфиденциальности</div>
+						<div class="how-image ico-4 i-3"></div>
+						<h4 class="how-title">Производство</h4>
+						<div class="how-content">После заключения договора дизайн-проект отправляется в мебельный цех </div>
 					</div>
 					<div class="how">
-						<div class="how-image"><img src="./img/how-4.png" alt=""></div>
-						<div class="how-content">Подбираем Вам <br> индивидуального <br> менеджера</div>
+						<div class="how-image ico-4 i-4"></div>
+						<h4 class="how-title">Доставка и монтаж</h4>
+						<div class="how-content">Доставляем  кухню в удобное для Вас время, собираем и подключаем технику</div>
 					</div>
 					<div class="how">
-						<div class="how-image"><img src="./img/how-5.png" alt=""></div>
-						<div class="how-content">Документы передаются <br> моментально через мессенджеры, <br> электронную почту или курьера</div>
-					</div>
-					<div class="how">
-						<div class="how-image"><img src="./img/how-6.png" alt=""></div>
-						<div class="how-content">Вы занимаетесь бизнесом, <br> мы отвечаем за <br> Вашу бухгалтерию</div>
+						<div class="how-image ico-4 i-5"></div>
+						<h4 class="how-title"> Кухня в радость</h4>
+						<div class="how-content">Вы наслаждаетесь новой кухней! </div>
 					</div>
 				</div>
 
 				<div class="how-form">
-					<div class="how-form-title">Остались вопросы?</div>
-					<div class="how-form-text">Напишите, и мы ответим на них в кратчайшие сроки!</div>
+					<div class="how-form-title">Оставьте заявку и получите дизайн-проект Вашей будущей кухни! </div>
 					<div class="how-form-content">
 						<form>
 							<div class="flex-row">
-								<input type="text" name="Имя" class="input" placeholder="Ваше имя">
-								<input type="tel" name="Телефон" class="input phone" required placeholder="Ваш номер*">		
+								<input type="text" name="Имя" class="input" placeholder="Введите имя">
+								<div class="input-div">
+									<input type="tel" name="Телефон" class="input phone" required placeholder="Введите телефон*">
+									<span class="error-message">Заполните это поле</span>
+								</div>		
+								<div class="input-div">
+									<input type="email" name="Имя" class="input" placeholder="Введите e-mail" required>
+									<span class="error-message">Заполните это поле</span>
+								</div>
+								<button class="button form-submit">Оставить заявку</button>
 							</div>
-							<textarea name="Вопрос" class="textarea" placeholder="Ваш вопрос..."></textarea>
-							<button class="button form-submit">Задать вопрос</button>
 						</form>
 					</div>
 				</div>
@@ -556,47 +329,37 @@
 		</section>
 
 		<section class="section-map" id="contacts">
-			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5df59bb0ff7d0309313e83a9cd62e6fe7f8408b52832253517dd6c980a9d9ce9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af4b59e03da42f208391342bd0e3e12d9126c6365636e1f782105873aea8c7155&amp;source=constructor" width="100%" height="437" frameborder="0"></iframe>
 		</section>
 
 		<footer class="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-lg-4">
-						<div class="footer-logo">
-							<img src="./img/logo-2.png" alt="">
-							<h3 class="logo-text">Бухгалтерские услуги <br> в Алматы</h3>
+				<div class="footer-content">		
+					<div class="logo">
+						<img src="./img/logo.png" alt="">
+						<h3 class="logo-text">Изготавление кухонь <br> на заказ по Казахстану</h3>		
+					</div>			
+									
+					<div class="footer-location">
+						<i class="ico-1"></i>
+						ТЦ Армада, ул.Кабдолова 1 <br> 3й блок, линия 9F
+					</div>
+								
+					<div class="footer-contact">
+						<i class="ico-1 ico-phone"></i>
+						<div class="footer-phones">
+							<div class="footer-phone">+7 (708) 714-71-27</div>
+							<a href="#" class="modal-open" data-id="application">Заказать звонок</a>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4">
-						<div class="footer-location">
-							<img src="./img/location.png" alt="">
-							г. Алматы, проспект Абая д 153, оф 18, <br>
-							Бизнес-центр "АлматыГорСтрой"
+
+					<div class="footer-company">
+						<div>
+							Разработано командой <br>
+							<img src="./img/company-logo.png" alt="MarketingTime">
 						</div>
-					</div>
-					<div class="col-sm-12 col-lg-4">
-						<div class="footer-right">
-							<div class="footer-phone">
-								<img src="./img/telephone.png" alt="">
-								<div>+7 (701) 722-41-59</div>
-								<div>+7 (701) 287-28-67</div>
-								<div>+7 (727) 394-31-80</div>
-								<div>info@aprilcons.kz</div> 
-								<a href="#" class="modal-open" data-id="application">Заказать звонок</a>
-							</div>
-							<div class="footer-company">
-								Разработано командой <br>
-								<img src="./img/company-logo.png" alt="MarketingTime">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="text-center">
-					<div>© ТОО «April Consulting».</div> 
-					<div>Все права защищены.</div>   
-					<div>Копирование материалов запрещено! </div>
-				</div>
+					</div>					
+				</div>				
 			</div>
 		</footer>
 		

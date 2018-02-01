@@ -6,10 +6,46 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
 
+	.section {
+		&-how {
+			.how {
+				@for $i from 1 through 5 {
+					&:nth-child(#{$i}) {
+						left: ($i - 1)*172px;
+					}
+				}
+
+				&:nth-child(odd) {
+					.how-image:before {
+						transform: rotateZ(38deg);
+					}
+				}
+
+				&:nth-child(even) {
+					.how-image:before {
+						transform: rotateZ(-38deg);
+					}
+				}
+			}
+		}
+	}
+	
+	.footer {
+		&-company {
+			width: 100%;
+		}
+	}
+}
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+
 	.main-menu {
-		background-color: #fff;
+		background-color: rgb(125, 128, 133);
 		position: fixed;
-		top: 89px;
+		top: 82px;
 		left: 0;
 		right: 0;
 		text-align: left;
@@ -23,106 +59,94 @@
 			padding: 15px 0;
 
 			li {
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 			}
 		}
 	}
-	
-	.footer {
-		&-right {
-			justify-content: center;
-		}
-
-		&-company {
-			flex-grow: 0;
-			margin-left: 30px;
-		}
-	}
-}
-	/**/
-
-
-@media only screen and (max-width : 1100px) {
-	.section {
-		&-how {			
-			&-content {
-				height: auto;
-				width: auto;
-				text-align: left;
-				background-image: none;				
-				margin: 0 0 40px;
-
-				br {
-					display: none;
-				}
-			}
-
-			.how {
-				width: 100%;
-				position: static;
-				flex-direction: row !important;				
-				margin-bottom: 20px;
-
-				&-image {
-					margin: 0 30px 0 0 !important;
-				}
-
-				&:nth-child(6) {
-					width: 100%;
-				}
-			}	
-
-		}
-	}
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 991px) {
 
 	.section {
-		&-main {
-			&-title {
-				margin-top: 120px;
-				font-size: 35px;
-			}
-
-			&-subtitle {
-				margin-bottom: 40px;
-			}
-
-			&-form {
-				.flex-row {
-					&>.input, .input-div {
-						width: 200px;
-					}
-				}
-
-				.button {
-					margin-left: 0;
-				}
-			}
-		}
-
-		&-plus {
-			.plus {
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-		}
-
-		&-offer {
-			background-size: auto;
-		}
 
 		&-reviews {
 			.carousel-reviews {
-				&-title {
-					height: 65px;
+				&-image {
+					max-width: 300px;
+				}
+			}
+		}
+
+		&-catalog {
+			.owl {
+				&-item {
+					transform: scale(1);
+					padding: 15px 10px 20px;
+				}
+
+				&-stage-outer {
+					padding: 0;
+				}
+
+				&-dots {
+					margin-top: 15px;
+				}
+			}
+		}
+
+		&-how {
+			&-content {
+				height: auto;
+				margin-bottom: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+
+			.how {
+				position: static;
+				margin: 10px 0;
+
+				&:nth-child(3) {
+					.how-content {
+						width: 100%;
+					}
+				}
+
+				&-image {
+					&:before {
+						display: none;
+					}
+				}
+
+				&-form {
+					.flex-row {
+						& > .input, .input-div {
+							margin-bottom: 25px;
+						}
+
+						flex-wrap: wrap;
+					}
+				}
+			}
+		}
+
+		&-certificate {
+			.carousel-certificate {
+				max-width: 500px;
+				margin: 0 auto;
+
+				.owl {
+					&-item {
+						transform: scale(1);
+					}
 				}
 			}
 		}
 	}
 
+	.footer {
+		&-company {
+			width: auto;
+		}
+	}
 }
 	/**/
 
@@ -141,11 +165,31 @@
 		}
 	}
 
+	.owl-carousel {
+		.owl {
+			&-dots {
+				margin-top: 25px;
+			}
+		}
+	}
+
 	.section {
+		padding: 25px 0 30px;
+
 		&-main {
+			&-title {
+				font-size: 35px;
+				margin-top: 20px;
+			}
+
+			&-subtitle {
+				font-size: 25px;
+				margin-bottom: 50px;
+			}
+
 			&-form {
 				.flex-row {
-					& >.input, .input-div {
+					.input-div, .button {
 						width: 100%;
 						margin-bottom: 15px;
 					}
@@ -153,49 +197,50 @@
 			}
 		}
 
-		&-offer {
-			.item {
-				order: 2;
-				&:nth-child(2) {
-					order: 1;
-				}
-			}
-		}
-
 		&-reviews {
 			.carousel-reviews {
-				&-title {
-					height: auto;
+				&-item {
+					display: block;
+				}
+
+				&-image {
+					padding-right: 60px;
+					max-width: 490px;
+					margin: 0 auto 20px;
+
+					&-author {
+						right: 0;
+					}
+				}
+
+				&-author {
+					text-align: right;
 				}
 			}
 		}
 
-		&-calculate {
-			.card {
-				padding: 15px;
-				
-				&-row.last > * {
-					width: 100%;
-					margin-right: 0;
+		&-how {
+			.how {
+				&-form {
+					.button {
+						margin-top: 20px;
+					}
 				}
-			}			
+			}
+		}
+
+		&-certificate {
+			.carousel-certificate {
+				max-width: 230px;
+				margin: 0 auto;
+			}
 		}
 	}
 
 	.footer {
-		&-right {
-			display: block;
-		}
-
-		&-company {
-			margin-top: 30px;
-			margin-left: 0;
-			width: auto;
-			text-align: left;
-		}
-
-		.text-center {
-			text-align: left;
+		&-content {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 }
@@ -216,25 +261,26 @@
 		display: none !important;
 	}
 
-	.mobtel{
-        display: block;
-	}
-	
-    .whatsapp{
-        display: block;
-    }
-
 	.modal {
 		&-content {
 			padding: 15px;
 		}
 	}
 
+	.header {
+		&-phones {
+			font-size: 14px;
+		}
+	}
+
 	.section {
 		&-main {
 			&-title {
-				margin-top: 50px;
 				font-size: 28px;
+			}
+
+			&-subtitle {
+				font-size: 20px;
 			}
 
 			&-form {
@@ -242,59 +288,27 @@
 			}
 		}
 
-		&-reason {
-			&-list {
-				li:nth-child(even) {
-					padding-left: 0;
-				}
-			}
-		}
-
-		&-offer form {
-			.input, .button {
-				width: 100%;
-			}
-		}
-
-		&-question {
-			&-content {
-				padding: 15px;
-			}
-		}
-
 		&-how {
 			.how {
-				&-image {
-					transform: scale(0.7);
-					margin-right: 0 !important;
+				&-form {
+					border: 0;
+					padding: 0;
+
+					.button {
+						margin-top: 20px;
+					}
 				}
 			}
-		}
+		}		
+	}
 
-		&-reviews {
-			.carousel-reviews {
-				padding: 0 35px;
-				&-title {
-					height: auto;
-				}
-			}
-		}
+	.footer {
+		&-content {
+			.logo {
+				display: block;
+				&-text {
+					margin-left: 0;
 
-		&-calculate {
-			.card {
-				padding: 15px;
-
-				&-row {
-					&:not(.small) {
-						& > *, & > .input {
-							margin-right: 0;
-							width: 100%;
-						}
-					}
-
-					&.small {
-						justify-content: center;
-					}
 				}
 			}
 		}
@@ -336,19 +350,19 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
-}
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
 	.main-menu {
 		.container {
 			width: auto;
 			padding: 0;
 		}
 	}
+}
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
 }
 	/**/
 
