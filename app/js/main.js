@@ -7,13 +7,20 @@ $(function() {
     var $menu = $(".main-menu");
     var $loader = $(".preloader");
     var $thanks = $("#thanks");
+
     var utms = parseGET();
+
+    if(utms && Object.keys(utms).length > 0) {
+        window.sessionStorage.setItem('utms', JSON.stringify(utms));
+    } else {
+        utms = JSON.parse(window.sessionStorage.getItem('utms') || "[]");
+    }
 
     // $wnd.on('load', function() {        
     //     $loader.fadeOut('slow');            
     // });
 
-    // $wnd.scroll(function() { onscroll(); });
+    $wnd.scroll(function() { onscroll(); });
 
     var onscroll = function() {
         if($wnd.scrollTop() > $wnd.height()) {
@@ -22,7 +29,7 @@ $(function() {
             $top.removeClass('active');
         }
 
-        var scrollPos = $wnd.scrollTop() + 89;
+        var scrollPos = $wnd.scrollTop() + 83;
 
         $menu.find("a").each(function() {
             var link = $(this);
@@ -38,7 +45,7 @@ $(function() {
         });
     }
 
-    // onscroll();
+    onscroll();
 
     $top.click(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
@@ -62,7 +69,7 @@ $(function() {
         e.preventDefault();
         var $href = $(this).attr('href');
         if($href.length > 0) {
-            var dh = 88;
+            var dh = 82;
             var top = $href.length == 1 ? 0 : $($href).offset().top - dh;
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
         }
@@ -70,21 +77,7 @@ $(function() {
 
     $(".modal-open").click(function() {
         var id = $(this).data('id');
-        var $dialog = $('#'+id);
-
-        if(id == 'service-modal') {
-            var $form = $(this).closest('form');
-            var service = "";
-
-            $form.find("input:checked").each(function() {
-                service += $(this).val() + ", ";
-            });
-
-            if(service.length > 2) service = service.substring(0, service.length - 2);
-
-            $dialog.find('.service-span').html(service);
-            $dialog.find('.service-input').val(service);            
-        }
+        var $dialog = $('#'+id);        
 
         $dialog.fadeIn(500);
         return false;
@@ -172,25 +165,7 @@ $(function() {
         if(!$this.hasClass('phone')) {
             checkInput($this);
         }
-    });
-
-    $(".price-button").click(function() {
-        var $form = $(this).closest('form');
-        var $phone = $form.find('.phone');
-
-        if(!$phone.val()) {
-            $phone.addClass('error');
-            return false;
-        } else {
-            $.ajax({
-                type: "POST",
-                url: "/mail.php",
-                data: $form.serialize()
-            }).done(function() {                
-            });
-            $form[0].reset();
-        }
-    });
+    });    
 
     $(".carousel-reviews").owlCarousel({
         items: 1,
@@ -228,7 +203,6 @@ $(function() {
             0: { items: 1 },
             768: { items: 2 },        
             992: { items: 3, margin: 0 },
-            // 1200: { items: 5 }        
         },
     });
 
@@ -256,7 +230,6 @@ $(function() {
             0: { items: 1 },
             768: { items: 2 },        
             992: { items: 3 },
-            // 1200: { items: 5 }        
         },
     });
 
@@ -287,7 +260,7 @@ function parseGET(url){
     if(url.indexOf('?') < 0) return Array(); 
     url = url.split('?'); 
     url = url[1]; 
-    var GET = [], params = [], key = []; 
+    var GET = {}, params = [], key = []; 
      
     if(url.indexOf('#')!=-1){ 
         url = url.substr(0,url.indexOf('#')); 

@@ -74,12 +74,7 @@ gulp.task('watch', ['sass', 'libs-js', 'main-js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-		.pipe(imagemin({
-            interlaced: true,
-            progressive: true,
-            optimizationLevel: 5,
-            svgoPlugins: [{removeViewBox: true}]
-        }))
+		.pipe(cache(imagemin()))
 		.pipe(gulp.dest('dist/img')); 
 });
 
