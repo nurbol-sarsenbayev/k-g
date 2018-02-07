@@ -49,7 +49,7 @@ a {
 	border-radius: 25px;
 	// box-shadow: 0px 3px 3px 0.63px rgba($accent, 0.79);
 	color: #2e2e2e;
-	padding: 12px 20px;
+	padding: 13px 20px;
 	min-width: 150px;
 	outline: 0;
 	border: 1px solid $accent;
@@ -170,8 +170,8 @@ a {
 	border: 1px solid $accent;
 	border-radius: 25px;
 	outline: 0;
-	padding: 12px 40px;
-	width: 170px;
+	padding: 12px 30px;
+	// width: 170px;
 	font-weight: 500;
 	background-color: transparent;
 
@@ -197,7 +197,7 @@ a {
 		display: none;
 		color: red;
 		font-size: 14px;
-		padding-left: 40px;
+		padding-left: 30px;
 	}
 
 	&::-webkit-input-placeholder {
@@ -225,6 +225,46 @@ a {
 	
 	&.error:-ms-input-placeholder {
 		color: red !important;
+	}
+}
+
+.selectize-control.single { 
+	height: 44px;
+
+	.selectize-input {
+		box-shadow: none;
+		font-size: 14px;
+		color: $default_text_color;
+		border: 1px solid $accent;
+		border-radius: 25px;
+		outline: 0;
+		padding: 12px 30px;
+		background-color: transparent;
+
+		&.input-active input {
+			cursor: pointer;
+		}
+
+		&:after {
+			right: 20px;
+	    	margin-top: -5px;
+			border-width: 12px 7px 0 7px;
+		}
+
+		&.dropdown-active {
+			&:after {
+				margin-top: -5px;
+				border-width: 0 7px 12px 7px;
+			}	
+		}
+
+		.item {
+			color: #6e6e6e;
+		}
+	}
+
+	.selectize-dropdown {
+		z-index: 80;
 	}
 }
 

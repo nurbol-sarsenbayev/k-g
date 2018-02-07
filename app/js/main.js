@@ -160,6 +160,19 @@ $(function() {
         }
     });    
 
+    var $catalogs = $(".carousel-catalog");
+    var $buttons = $(".section-catalog-buttons .button");
+    $buttons.click(function() {
+        $buttons.removeClass("inverse");
+        $(this).addClass("inverse");
+        
+        var id = "#" + $(this).data("id");
+        $catalogs.removeClass("active");
+        $(id).addClass("active");
+    })
+
+    $(".select").selectize();
+
     $("input:required").keyup(function() {
         var $this = $(this);
         if(!$this.hasClass('phone')) {
@@ -189,15 +202,20 @@ $(function() {
         margin: 10,
         navText: ['', ''],
         onChanged: function(e) {
-            setTimeout(function() {
-                $(".carousel-catalog .owl-item").removeClass("scale");
-                var items = $(".carousel-catalog .owl-item.active");
-                if(items.length == 3) {
-                    items.each(function(i, item) {
-                        if(i == 1) $(item).addClass("scale");                        
-                    });
-                }
-            }, 0);
+            var $gallery = $(this)[0].$element;
+            var $items = $gallery.find('.owl-item');
+            
+            if($items && $items.length > 0) {
+                setTimeout(function() {
+                    $items.removeClass("scale");
+                    var items = $gallery.find(".owl-item.active");
+                    if(items.length == 3) {
+                        items.each(function(i, item) {
+                            if(i == 1) $(item).addClass("scale");                        
+                        });
+                    }
+                }, 0);
+            }
         },
         responsive: {
             0: { items: 1 },
@@ -216,15 +234,20 @@ $(function() {
         margin: 10,
         navText: ['', ''],
         onChanged: function(e) {
-            setTimeout(function() {
-                $(".carousel-certificate .owl-item").removeClass("scale");
-                var items = $(".carousel-certificate .owl-item.active");
-                if(items.length == 3) {
-                    items.each(function(i, item) {
-                        if(i == 1) $(item).addClass("scale");                        
-                    });
-                }
-            }, 0);
+            var $gallery = $(this)[0].$element;
+            var $items = $gallery.find('.owl-item');
+            
+            if($items && $items.length > 0) {
+                setTimeout(function() {
+                    $items.removeClass("scale");
+                    var items = $gallery.find(".owl-item.active");
+                    if(items.length == 3) {
+                        items.each(function(i, item) {
+                            if(i == 1) $(item).addClass("scale");                        
+                        });
+                    }
+                }, 0);
+            }
         },
         responsive: {
             0: { items: 1 },

@@ -7,6 +7,16 @@
 @media only screen and (max-width : 1199px) {
 
 	.section {
+		&-catalog {
+			&-row {
+
+				.button {
+					flex-grow: 0;
+					flex-basis: 200px;
+				}
+			}
+		}
+
 		&-how {
 			.how {
 				@for $i from 1 through 5 {
@@ -40,7 +50,7 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 991px) {
+@media only screen and (max-width : 991px) {	
 
 	.main-menu {
 		background-color: rgb(125, 128, 133);
@@ -154,6 +164,15 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
 
+	.section-map {
+		display: block;
+
+		iframe, div {
+			display: block;
+			width: 100%;
+		}
+	}
+
 	.button {
 		min-width: auto;
 	}
@@ -195,6 +214,19 @@
 					}
 				}
 			}
+
+			.rassro4ka {
+				display: none;
+			}
+		}
+
+		&-catalog {
+			&-row {
+				& > * {
+					flex-basis: 200px;
+					flex-grow: 0;
+				}
+			}
 		}
 
 		&-reviews {
@@ -234,8 +266,8 @@
 				max-width: 230px;
 				margin: 0 auto;
 			}
-		}
-	}
+		}		
+	}	
 
 	.footer {
 		&-content {
